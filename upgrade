@@ -1,0 +1,24 @@
+Verified node versions. Began reviewing resources and services per node, but could not proceed further because the oc CLI is not installed on my remote machine.
+
+Blocker:
+oc CLI is not installed on the remote machine and needs to be installed so I can access the nodes
+
+Opened an NSD ticket requesting for oc installation to proceed with the environment inventory.
+
+Next Step:
+
+Await oc CLI installation to complete resources and service mapping before validating the upgrade readiness
+
+
+
+Made the required changes in the repositories for the Helm chart upgrade. I successfully ran SPM 33 and 49 without deploying to the SPM stage. 
+
+The initial deployment to the SPM stage failed, and the issue was identified and resolved. 
+
+Re-ran the pipeline, but it is now failing at an earlier stage that was previously passing, suspected network-related error, and investigation in progress.
+
+Blocker:
+Pipeline execution is being impacted by possible network issues, awaiting resolution to proceed.
+
+
+Helm upgrade is also part of the scope. I have located the Helm configuration in the infrastructure repository, which indicates the upgrade will be executed through the pipeline and will proceed once the process is confirmed in relation to the Kubernetes upgrade.
